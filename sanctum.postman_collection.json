@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "6d774302-b172-441c-82c0-0051af3f8b12",
+		"name": "sanctum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29683199"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "edwan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "edwan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "rahasia123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|syQD4vhfrQ0PDcR3GJgMMTbceDgG8dm56OxH38et91027262"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "edwan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "rahasia123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "get posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|z7cEY3dL3G7SO76tXjd0CHSawX242v9WZTIHLnLId5c4b769"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "insert post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|z7cEY3dL3G7SO76tXjd0CHSawX242v9WZTIHLnLId5c4b769"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/nidza/Downloads/PHOTO-2023-03-29-14-20-52 3.jpg"
+								},
+								{
+									"key": "title",
+									"value": "Pejabat BAWASLU",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "ini content buat pejabat bawaslu",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "get a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|z7cEY3dL3G7SO76tXjd0CHSawX242v9WZTIHLnLId5c4b769"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/posts/11"
+					},
+					"response": []
+				},
+				{
+					"name": "update a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|z7cEY3dL3G7SO76tXjd0CHSawX242v9WZTIHLnLId5c4b769"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/nidza/Downloads/PHOTO-2023-03-29-14-20-52 3.jpg"
+								},
+								{
+									"key": "title",
+									"value": "Pejabat BAWASLU",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "ini content buat pejabat bawaslu ini yg aku update PUT",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/posts/9"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|z7cEY3dL3G7SO76tXjd0CHSawX242v9WZTIHLnLId5c4b769"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/posts/10"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
